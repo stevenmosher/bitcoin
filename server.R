@@ -6,6 +6,19 @@
 #
 
 library(shiny)
+library(shinydashboard)
+
+
+ Difficulty <- "https://api.blockchain.info/charts/difficulty?format=csv&timespan=all"
+ Price      <- "https://api.blockchain.info/charts/market-price?format=csv&timespan=all"
+ HashRate   <-"https://api.blockchain.info/charts/hash-rate?format=csv&timespan=all"
+ 
+ Diff <- function(fname=Difficulty){
+   
+   D <- read.csv(fname,stringsAsFactors = F,header=F)
+   
+   
+ }
 
 shinyServer(function(input, output) {
 
